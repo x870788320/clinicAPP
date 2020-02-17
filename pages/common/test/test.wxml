@@ -1,0 +1,17 @@
+<!--pages/common/test/test.wxml-->
+<!-- <text>pages/common/test/test.wxml</text> -->
+<template name = "A">
+  <text>dddfaaa</text>
+</template>
+<template name = "B">
+  <text>bbbbbb</text>
+</template>
+<template name = "C">
+  <text>bbbbbbb</text>
+</template>
+
+<view>
+  <text>
+    testtest
+  </text>
+</view>

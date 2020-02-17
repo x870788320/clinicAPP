@@ -1,0 +1,28 @@
+<!--pages/demo/demo.wxml-->
+<view class="container">
+  <import src = '../common/test/test.wxml'/>
+
+  <input placeholder = "{{name}}" class='demo_input' />
+  <button bindtap='goIndex'>goIndex</button>
+  <movable-view>sdfsdf</movable-view>
+  <progress></progress>
+  <radio />
+  <template is="A" />
+  <text>fefdfef</text>
+  <template is="B" />
+
+  <include src="../common/test/test.wxml" />
+  <view wx:for = "{{testArr}}" wx:for-item = "name" wx:key = '*this'>
+    {{item}} ----{{index}} ---{{name}}
+  </view>
+  <text wx:if = "{{false}}">11111</text>
+  <text wx:else>222222</text>
+
+  <view wx:for = '{{testObj}}' wx:for-item = "value" wx:key ="value">
+   {{index}}--{{value}}
+  </view>
+  <view bindlongtap='testClick'>{{name}}</view>
+  <button bindtap = 'changeName'>{{name}}</button>
+<icon type="success" size="50"/>
+
+</view>

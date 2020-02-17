@@ -1,0 +1,6 @@
+/* pages/demo/demo.wxss */
+
+.demo_input{
+  border: 1rpx solid #000;
+  padding: 10rpx;
+}

@@ -13,7 +13,7 @@ Page({
       age:2,
       sex: 1
     },
-    name: app.myData.name
+    name: "app.publicData.name"
   },
 
   /**

@@ -1,7 +1,39 @@
 //app.js
 App({
-  myData:{
-    name:"fesfe"
+  globalData: {
+    userInfo: null,
+    itemList: [
+      {
+        id: 1,
+        name: "美女",
+        pic: "index/modify.png",
+        click: "handleModify"
+      },
+      {
+        id: 2,
+        name: "帅哥",
+        pic: "index/mineSe.png",
+        click: "handleBeautiful"
+      },
+      {
+        id: 3,
+        name: "他大爷",
+        pic: "index/child.png",
+        click: "handleChild"
+      },
+      {
+        id: 4,
+        name: "他二大爷",
+        pic: "index/badtooth.png",
+        click: "handleBadtooth"
+      },
+    ],
+    aboutUs:{
+      "名称":"吉祥如意",
+      "电话":15912345678,
+      "邮箱":"15912345678@163.com",
+      "地址":"研发中心 A3f4-6-81"
+    }
   },
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,8 +67,5 @@ App({
         }
       }
     })
-  },
-  globalData: {
-    userInfo: null
   }
 })

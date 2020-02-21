@@ -1,15 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
+  <import src = '../common/widget/widget.wxml'/>
+
   <swiper indicator-dots="{{swiperData.indicatorDots}}" 
           autoplay="{{swiperData.autoplay}}" 
           bindchange="swiperChange"
@@ -18,8 +10,28 @@
           class='swiper'>
     <block wx:for = "{{imgArr}}" wx:key = "item">
       <swiper-item>
-        <image src = "{{src+item}}" bindtap='imgClick'/>
+        <image src = "{{srcSwiper+item}}" bindtap='imgClick' wx:if="{{imgArr.length>0}}"/>
       </swiper-item>
     </block>
   </swiper>
+
+  <view class = "itemList">
+    <block wx:for = "{{itemList}}" wx:key = "item"  bindtap = "{{item.click}}">
+      <template is="publicIconText" data="{{item}}"/>
+    </block>
+  </view>
+  <block wx:for = "{{titleArr}}" wx:key = "item" wx:for-item = "title">
+    <template is="publicItemTitle" data="{{title}}"/>
+    <view wx:if = "{{title === '项目'}}" class = "itemList">
+      <block wx:for = "{{showFirstArr}}" wx:key = "item"  bindtap = "{{item.click}}">
+        <template is="publicIconText" data="{{item}}"/>
+      </block>
+    </view>
+    <view wx:if = "{{title === '关于'}}" class = "about">
+      <view wx:for = "{{aboutUs}}" wx:key = "item" class = "about_block">
+        <text class = "about_key">{{index}}</text>:
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </block>
 </view>

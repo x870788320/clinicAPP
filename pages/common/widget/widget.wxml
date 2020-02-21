@@ -1,0 +1,30 @@
+<!--pages/common/test/test.wxml-->
+<!-- <text>pages/common/test/test.wxml</text> -->
+<template name = "publicIconText">
+  <view class = "iconText {{item.class}}">
+    <!-- <icon type="success" size="40" color="red"/> -->
+    <image src = "{{'../../static/images/' + item.pic}}" class = "iconText-icon"/>
+    <text class='iconText-text'>
+      {{item.name}}{{imgSrc}}
+    </text>
+  </view>
+</template>
+<template name = "publicItemTitle">
+  <view class = "itemTitle">
+    <!-- <icon type="success" size="20" color="white" class = "itemTtile-icon"/> -->
+    <text>></text>
+    <text class = "title_text">{{title}}</text>
+  </view>
+</template>
+<template name = "publicCard">
+  <view class = "publicCardContainer">
+    <image/>
+  </view>
+  <text>bbbbbbb</text>
+</template>
+
+<view>
+  {{adds}}
+</view>
+
+

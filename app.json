@@ -1,17 +1,17 @@
 {
   "pages": [
+    "pages/mine/mine",
     "pages/item/item",
     "pages/index/index",
     "pages/demo/demo",
     "pages/logs/logs",
     "pages/common/test/test",
-    "pages/mine/mine",
     "pages/book/book"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff461f",
-    "navigationBarTitleText": "WeChatfdgd",
+    "navigationBarTitleText": "Clinic",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",

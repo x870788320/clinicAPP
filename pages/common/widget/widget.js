@@ -1,4 +1,13 @@
-// pages/common/test/test.js
+// pages/common/widget/widget.js
+
+const publicJs = {
+  publicGoto(e){
+    console.log(e)
+  }
+}
+
+export default publicJs
+
 Page({
 
   /**
@@ -64,4 +73,5 @@ Page({
   onShareAppMessage: function () {
 
   }
+  
 })

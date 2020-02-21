@@ -1,13 +1,25 @@
 <!--pages/mine/mine.wxml-->
-<view  class="container">
+<view  class="mine">
+  <import src = '../common/widget/widget.wxml'/>
+
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登陆 </button>
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登陆 </button> -->
+    <block wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <image src="{{imgSrc+'nolog.png'}}" class="userinfo-avatar" mode="cover"></image>
+      <view class = "mine_header_text">
+        <text>登陆</text>
+        <text  class = "mine_header_seText">登陆后可以为您更好的服务！</text>
+      </view>
+    </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  
+  <view class = "mine_content">
+    <block wx:for = "{{mineArr}}" wx:key = "item"  bindtap = "{{item.click}}">
+      <template is="publicIconText" data="{{item}}"/>
+    </block>
   </view>
 </view>

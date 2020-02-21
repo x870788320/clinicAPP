@@ -55,6 +55,9 @@ Page({
 
   },
   onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: "首页"
+    })
     // this.setData({
     //   itemList: app.globalData.itemList
     // })

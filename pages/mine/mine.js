@@ -1,5 +1,5 @@
 
-
+// import { publicGoto } from "../common/widget/widget.js"
 const app = getApp()
 // pages/mine/mine.js
 Page({
@@ -12,12 +12,63 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    imgSrc:"../../static/images/mine/",
+    mineArr:[
+      {
+        id:1,
+        pic:"mine/money.png",
+        name:"我的钱包",
+        click:"money",
+        class: "mineListStyle",
+        textClass: "mineTextClass"
+      },
+      {
+        id: 2,
+        pic: "mine/coupon.png",
+        name: "我的卡券",
+        click: "coupon",
+        class: "mineListStyle",
+        textClass: "mineTextClass"
+      },
+      {
+        id: 3,
+        pic: "mine/haveBooked.png",
+        name: "当前预约",
+        click: "haveBooked",
+        class: "mineListStyle",
+        textClass: "mineTextClass"
+      },
+      {
+        id: 4,
+        pic: "mine/history.png",
+        name: "我的订单",
+        click: "history",
+        class: "mineListStyle",
+        textClass: "mineTextClass"
+      },
+      {
+        id: 5,
+        pic: "mine/itemclass.png",
+        name: "其  它 ",
+        click: "itemclass",
+        class: "mineListStyle",
+        textClass:"mineTextClass"
+      },
+
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // wx.setNavigationBarTitle({
+    //   title: "我的"
+    // })
+    // wx.navigationBarTextStyle({
+    //   title: "我的"
+    // })
+    console.log(this.data.mineArr[1].names)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

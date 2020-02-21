@@ -1,12 +1,13 @@
 <!--pages/common/test/test.wxml-->
 <!-- <text>pages/common/test/test.wxml</text> -->
 <template name = "publicIconText">
-  <view class = "iconText {{item.class}}">
+  <view class = "iconText {{item.class}}" bindtap='publicGoto'>
     <!-- <icon type="success" size="40" color="red"/> -->
-    <image src = "{{'../../static/images/' + item.pic}}" class = "iconText-icon"/>
-    <text class='iconText-text'>
-      {{item.name}}{{imgSrc}}
-    </text>
+    <image src = "{{'../../static/images/' + item.pic}}" class = "iconText-icon {{item.imgClass}}" />
+    <text class='iconText-text {{item.textClass}}'>{{item.name}}</text>
+    <block wx:for = "{{item.names}}" wx:key = "item">
+      <text class='iconText-text {{item.names.textClass}}'>{{item}}</text>
+    </block>
   </view>
 </template>
 <template name = "publicItemTitle">

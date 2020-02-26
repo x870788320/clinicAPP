@@ -2,16 +2,14 @@
   width:120rpx;
   text-align: center;
   margin:40rpx 25rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.firstItemClass {
-  width:320rpx;
-  height:260rpx;
-  margin:15rpx 10rpx;
-  border:1rpx solid #888
-}
 
-.iconText .iconText-icon {
+.iconText-icon {
   width:80rpx;
   height:80rpx;
 }
@@ -20,6 +18,26 @@
 .iconText-text{
   color:#888;
   font-size: 30rpx;
+}
+
+.iconText-list{
+  height: 210rpx;
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  overflow: hidden;
+  text-align: left;
+  margin:10rpx ;
+  font-size: 26rpx;
+}
+
+.iconText-name{
+  font-size: 36rpx;
+  color:#000;
+}
+
+.iconText-list text{
+
 }
 
 .itemTitle {
@@ -39,5 +57,10 @@
 }
 
 
+
 .itemTtile-icon {
+}
+
+.test{
+  background:#ff461f
 }

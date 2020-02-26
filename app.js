@@ -5,27 +5,31 @@ App({
     itemList: [
       {
         id: 1,
-        name: "美女",
+        name: "美女", 
         pic: "index/modify.png",
-        click: "handleModify"
+        fun: "handleHomeListGo",
+        selfCss:"itemListClass"
       },
       {
         id: 2,
         name: "帅哥",
         pic: "index/mineSe.png",
-        click: "handleBeautiful"
+        fun: "handleHomeListGo",
+        selfCss: "itemListClass"
       },
       {
         id: 3,
         name: "他大爷",
         pic: "index/child.png",
-        click: "handleChild"
+        fun: "handleHomeListGo",
+        selfCss: "itemListClass"
       },
       {
         id: 4,
         name: "他二大爷",
         pic: "index/badtooth.png",
-        click: "handleBadtooth"
+        fun: "handleHomeListGo",
+        selfCss: "itemListClass"
       },
     ],
     aboutUs:{

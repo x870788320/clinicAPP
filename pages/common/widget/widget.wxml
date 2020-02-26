@@ -1,15 +1,22 @@
 <!--pages/common/test/test.wxml-->
 <!-- <text>pages/common/test/test.wxml</text> -->
-<template name = "publicIconText">
-  <view class = "iconText {{item.class}}" bindtap='publicGoto'>
+
+<!-- icon-text模板，子传样式、事件，参数是id，用作wx：for -->
+<template name = "publicCard">
+  <view class = "iconText {{item.selfCss}}" bindtap = "{{item.fun}}" data-id = "{{item.id}}">
     <!-- <icon type="success" size="40" color="red"/> -->
-    <image src = "{{'../../static/images/' + item.pic}}" class = "iconText-icon {{item.imgClass}}" />
-    <text class='iconText-text {{item.textClass}}'>{{item.name}}</text>
-    <block wx:for = "{{item.names}}" wx:key = "item">
-      <text class='iconText-text {{item.names.textClass}}'>{{item}}</text>
-    </block>
+    <image src = "{{'../../static/images/' + item.pic}}" class = "iconText-icon" />
+    <view wx:if = "{{item.pieces}}" class = "iconText-list">
+      <text class='iconText-name'>{{item.name}}</text>
+      <block wx:for = "{{item.pieces}}" wx:key = "item" wx:for-item = "msg">
+        <text class="iconText-text-{{index}} {{item.names.textClass}}">{{msg}}</text>
+      </block>
+    </view>
+    <text wx:else class='iconText-text'>{{item.name}}</text>
   </view>
 </template>
+
+<!-- home页面内容项的title -->
 <template name = "publicItemTitle">
   <view class = "itemTitle">
     <!-- <icon type="success" size="20" color="white" class = "itemTtile-icon"/> -->
@@ -17,12 +24,20 @@
     <text class = "title_text">{{title}}</text>
   </view>
 </template>
-<template name = "publicCard">
-  <view class = "publicCardContainer">
-    <image/>
+
+<!-- 暂时封装一个card -->
+<!-- <template name = "publicCard">
+  <view class = "publicCard {{item.selfCss}}" bindtap = "{{item.fun}}" data-id = "{{item.id}}">
+    <image src = "{{'../../static/images/' + item.pic}}" class = "iconText-icon" />
+    <view>
+      <text class='iconText-text'>{{item.name}}</text>
+      <block wx:for = "{{item.pieces}}" wx:key = "item">
+        {{item}} -- {{index}}
+        <text class="iconText-text-{{index}} {{item.names.textClass}}">{{item}}</text>
+      </block>
+    </view>
   </view>
-  <text>bbbbbbb</text>
-</template>
+</template> -->
 
 <view>
   {{adds}}

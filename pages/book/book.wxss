@@ -1,1 +1,33 @@
 /* pages/book/book.wxss */
+
+
+.bookDoctorCss {
+  width: 90%;
+  height: 260rpx;
+  border:1px solid #888;
+  margin:30rpx;
+  flex-direction: row-reverse;
+}
+
+.bookDoctorCss .iconText-icon {
+  width: 200rpx;
+  height: 240rpx;
+  margin:10rpx;
+}
+
+.iconText-text-msg {
+  color:#999;
+  margin:10rpx;
+  margin-left:30rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+}
+
+
+.iconText-text-info {
+  font-size: 30rpx;
+  color:#666;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

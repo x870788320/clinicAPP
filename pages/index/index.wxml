@@ -17,14 +17,14 @@
 
   <view class = "itemList">
     <block wx:for = "{{itemList}}" wx:key = "item"  bindtap = "{{item.click}}">
-      <template is="publicIconText" data="{{item}}"/>
+      <template is="publicCard" data="{{item}}"/>
     </block>
   </view>
   <block wx:for = "{{titleArr}}" wx:key = "item" wx:for-item = "title">
     <template is="publicItemTitle" data="{{title}}"/>
     <view wx:if = "{{title === '项目'}}" class = "itemList">
       <block wx:for = "{{showFirstArr}}" wx:key = "item"  bindtap = "{{item.click}}">
-        <template is="publicIconText" data="{{item}}"/>
+        <template is="publicCard" data="{{item}}"/>
       </block>
     </view>
     <view wx:if = "{{title === '关于'}}" class = "about">

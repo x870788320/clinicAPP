@@ -1,0 +1,14 @@
+
+var publicJs = {
+  publicGoto:function(item) {
+    console.log(JSON.stringify(item))
+    console.log("widget")
+    // wx.navigateTo({  //拿不到
+    //   url: '../index/index?a=3',
+    // })
+    
+  }
+}
+
+module.exports = publicJs
+

@@ -1,7 +1,7 @@
 <!--pages/mine/mine.wxml-->
 <view  class="mine">
   <import src = '../common/widget/widget.wxml'/>
-
+  <wxs src = "../common/widget/widget.wxs" module = "commonFuntion"/>
   <view class="userinfo">
     <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登陆 </button> -->
     <block wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
@@ -12,14 +12,21 @@
       </view>
     </block>
     <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <!-- <template is="publicIconText" data="{{item}}"/> -->
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" />
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
   
   <view class = "mine_content">
-    <block wx:for = "{{mineArr}}" wx:key = "item"  bindtap = "{{item.click}}">
-      <template is="publicIconText" data="{{item}}"/>
-    </block>
+    <view wx:for = "{{mineArr}}" wx:key = "item">
+      <template is="publicCard" data="{{item}}"/>
+    </view>
   </view>
+  
+  <!-- <view class = "mine_content">
+    <view wx:for = "{{mineArr}}" wx:key = "item.id">
+      <text bindtap = "{{commonFuntion.publicGoto}}" data-index = "{{index}}" class = "{{index == key?test:''}}">aaaaaa</text>
+    </view>
+  </view> -->
 </view>

@@ -1,5 +1,4 @@
 /* pages/mine/mine.wxss */
-@import "../common/widget/widget.wxss";
 .mine{
   min-height: 100%;
   background: #eee;
@@ -54,6 +53,11 @@
   border-radius: 20rpx;
   margin:20rpx 0;
 }
-.mineTextClass{
+
+.mineListStyle .iconText-text{
   margin-left:40rpx;
+}
+
+.test{
+  color:#f00
 }

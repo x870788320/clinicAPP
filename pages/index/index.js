@@ -27,29 +27,29 @@ Page({
         id: 1,
         name: "春分",
         pic: "index/spring.jpeg",
-        click: "spring",
-        class:"firstItemClass"
+        fun: "handleContentGo",
+        selfCss:"firstItemClass"
       },
       {
         id: 2,
         name: "夏至",
         pic: "index/summer.gif",
-        click: "summer",
-        class: "firstItemClass"
+        fun: "handleContentGo",
+        selfCss: "firstItemClass"
       },
       {
         id: 3,
         name: "寒露",
         pic: "index/autumu.gif",
-        click: "autumu",
-        class: "firstItemClass"
+        fun: "handleContentGo",
+        selfCss: "firstItemClass"
       },
       {
         id: 4,
         name: "大雪",
         pic: "index/winter.jpg",
-        click: "winter",
-        class: "firstItemClass"
+        fun: "handleContentGo",
+        selfCss: "firstItemClass"
       },
     ],
 
@@ -72,5 +72,9 @@ Page({
   },
   imgClick(){
     console.log(this.data.swiperData.currentIndex)
+  },
+
+  handleContentGo(e){
+    console.log(e)
   }
 })

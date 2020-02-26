@@ -27,6 +27,15 @@
 }
 
 
+.firstItemClass {
+  width:320rpx;
+  height:260rpx;
+  margin:15rpx 10rpx;
+  border:1rpx solid #888;
+  flex-direction:column;
+  justify-content: space-around;
+}
+
 .firstItemClass .iconText-icon {
   width:320rpx;
   height:200rpx;
@@ -52,4 +61,11 @@
 .about_key{
   width:80rpx;
   display: inline-block;
+}
+
+.itemListClass{
+  flex-direction: column;
+}
+.itemListClass .iconText-text{
+  margin-top:10rpx;
 }

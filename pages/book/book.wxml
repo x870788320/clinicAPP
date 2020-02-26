@@ -1,2 +1,15 @@
 <!--pages/book/book.wxml-->
-<text>pages/book/book.wxml</text>
+<view>
+  <import src = '../common/widget/widget.wxml'/>
+
+  <view>
+    <button>按时间</button>
+    <button>按名称</button>
+  </view>
+
+  <view>
+    <block wx:for="{{doctors}}" wx:key = "item">
+      <template is = "publicCard" data="{{item}}"/>
+    </block>
+  </view>
+</view>

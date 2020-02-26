@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/book/book",
     "pages/mine/mine",
     "pages/item/item",
     "pages/index/index",
     "pages/demo/demo",
     "pages/logs/logs",
-    "pages/common/test/test",
-    "pages/book/book"
+    "pages/common/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",

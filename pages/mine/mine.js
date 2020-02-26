@@ -1,5 +1,8 @@
 
 // import { publicGoto } from "../common/widget/widget.js"
+import widget from "../common/widget/widget.js"
+const { publicGoto } = widget
+
 const app = getApp()
 // pages/mine/mine.js
 Page({
@@ -8,6 +11,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    key:"",
+    test:"test",
     motto: 'someting',
     userInfo: {},
     hasUserInfo: false,
@@ -17,42 +22,37 @@ Page({
       {
         id:1,
         pic:"mine/money.png",
-        name:"我的钱包",
-        click:"money",
-        class: "mineListStyle",
-        textClass: "mineTextClass"
+        name: "我的钱包",
+        fun: "handleMineGo",
+        selfCss: "mineListStyle"
       },
       {
         id: 2,
         pic: "mine/coupon.png",
         name: "我的卡券",
-        click: "coupon",
-        class: "mineListStyle",
-        textClass: "mineTextClass"
+        fun: "handleMineGo",
+        selfCss: "mineListStyle"
       },
       {
         id: 3,
         pic: "mine/haveBooked.png",
         name: "当前预约",
-        click: "haveBooked",
-        class: "mineListStyle",
-        textClass: "mineTextClass"
+        fun: "handleMineGo",
+        selfCss: "mineListStyle"
       },
       {
         id: 4,
         pic: "mine/history.png",
         name: "我的订单",
-        click: "history",
-        class: "mineListStyle",
-        textClass: "mineTextClass"
+        fun: "handleMineGo",
+        selfCss: "mineListStyle"
       },
       {
         id: 5,
         pic: "mine/itemclass.png",
         name: "其  它 ",
-        click: "itemclass",
-        class: "mineListStyle",
-        textClass:"mineTextClass"
+        fun: "handleMineGo",
+        selfCss: "mineListStyle"
       },
 
     ]
@@ -68,7 +68,8 @@ Page({
     // wx.navigationBarTextStyle({
     //   title: "我的"
     // })
-    console.log(this.data.mineArr[1].names)
+    // publicGoto()
+    console.log(publicGoto)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -163,4 +164,7 @@ Page({
       hasUserInfo: true
     })
   },
+  handleMineGo(e) { 
+    console.log(e)
+  }
 })
